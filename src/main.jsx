@@ -5,11 +5,6 @@ import { restaurants } from "/materials/mock.js";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-//const names = restaurants.map(rest => rest.name);
-
-//console.log(names);
-
-
 const getRestInfo = (restaurant) => {
 
     return (
@@ -43,16 +38,6 @@ const getRestInfo = (restaurant) => {
         </div>
     );
 };
-
-
- //root.render(
- //  createElement(
- //    "ul",
- //    { className: "someClass", style: { color: "red" } },
- //    [1, 2, 3, 4, 5].map((id) => createElement("li", {}, id))
- //  )
- //);
-
 
 root.render(
     createElement(
