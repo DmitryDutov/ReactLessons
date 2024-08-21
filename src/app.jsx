@@ -5,16 +5,18 @@ export const App = ({title}) => {
             <div>
                 <h1>{title}</h1>
                 <div>{restaurants.length}</div>
+                <ul>
 
-                {restaurants.map(({name}) => 
-                        {
-                            <ul>
-                                <li>{name} </li>
-                            </ul>
-                        }
-                    )
-                }
+                {restaurants.map(({ name }) => 
+                    {
+                        return ( 
+                            <li key={name}> {name} </li>
+                        );
+                    }
+                )
+            }
 
+                </ul>
             </div>
     );
 
