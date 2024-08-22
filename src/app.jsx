@@ -1,5 +1,10 @@
-import { RestaurantList } from "./components/restaraunt-list/restaraunt-list.jsx"; 
+import { RestaurantPage } from "./components/restaurant-page/restaurant-page";
+import { Layout } from "./components/layout/layout";
 
 export const App = () => {
-    return <RestaurantList title="Restaurants" />;
+    return (
+        <Layout>
+            <RestaurantPage title='restaurants app' />
+        </Layout>
+    );
 };
