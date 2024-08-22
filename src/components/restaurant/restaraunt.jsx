@@ -1,31 +1,19 @@
-import React from "react";
-
-export const restaurant = ({id, name, menu, reviews}) => {
+export const Restaurant = ({id, name}) => {
     return (
-            <React.Fragment key={id}> 
-                <h2>
-                    {name}
-                </h2>
-                <h3>Menu:</h3>
-                <div>
-                    {menu.map(
-                            restMenu =>
-                            (
-                                <li key={restMenu.id}>{restMenu.name} = {restMenu.price}</li>
-                            )
-                        )
-                    }
+            <section> 
+                <h2 key={id}> {name} </h2>
+                {/* <h3>Menu:</h3>
+                <div> 
+                    {menu.map((text) => (
+                        <li>{text}</li>
+                    ))} 
                 </div>
                 <h3>Review:</h3>
-                <div>
-                    {reviews.map(
-                            restReviw =>
-                            (
-                                <li key={restReviw.user}>{restReviw.text} = {restReviw.rating}</li>
-                            )
-                        )
-                    }
-                </div>
-            </React.Fragment>
-    )
-}
+                <div> 
+                    {reviews.map((rev) => (
+                        <li>{rev}</li>
+                    ))} 
+                </div> */}
+            </section>
+    );
+};
