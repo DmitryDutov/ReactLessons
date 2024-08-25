@@ -15,5 +15,4 @@ export const RestaurantPage = ({ title }) => {
             ))}
         </div>
     );
-    return (<div></div>);
 };
