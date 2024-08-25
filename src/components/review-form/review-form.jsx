@@ -1,3 +1,4 @@
+import { Counter } from "../counter/counter";
 import { useForm } from "./use-form";
 
 export const ReviewForm = () => {
@@ -16,7 +17,7 @@ export const ReviewForm = () => {
         </div>
         <div>
             <div>Rate</div>
-            <input type='text' value={rate} onChange={setRate} />
+            <Counter onClick={setRate} />
         </div>
         </div>
   );
