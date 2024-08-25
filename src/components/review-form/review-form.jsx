@@ -17,7 +17,7 @@ export const ReviewForm = () => {
         </div>
         <div>
             <div>Rate</div>
-            <Counter onClick={setRate} />
+            <Counter min={1} max={5} onClick={setRate} />
         </div>
         </div>
   );
