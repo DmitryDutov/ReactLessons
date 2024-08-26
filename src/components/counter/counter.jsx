@@ -1,13 +1,10 @@
-import { useCount } from "./use-counter";
-
-export const Counter = ({min, max}) => {
-    const { value, increment, decrement } = useCount({minValue: min, maxValue: max});
+export const Counter = ({ value, onIncrease, onDecrease }) => {
 
     return (
         <div>
-            <button onClick={increment}>+</button>
-            {value}
-            <button onClick={decrement}>-</button>
+            <button onClick={onIncrease}>+</button>
+            <input type="text" readOnly value={value} />
+            <button onClick={onDecrease}>-</button>
         </div>
     );
 };

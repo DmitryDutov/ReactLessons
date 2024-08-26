@@ -1,5 +1,5 @@
-import { Counter } from "../counter/counter";
 import { useForm } from "./use-form";
+import { ReviewCounter } from "../review-counter/review-counter";
 
 export const ReviewForm = () => {
     const { form, setName,  setText, setRate, clear  } = useForm();
@@ -7,19 +7,23 @@ export const ReviewForm = () => {
 
     return (
         <div>
-        <div>
-            <div>Name</div>
-            <input type='text' value={name} onChange={setName} />
-        </div>
-        <div>
-            <div>Text</div>
-            <input type='text' value={text} onChange={setText} />
-        </div>
-        <div>
-            <div>Rate</div>
-            <Counter min={1} max={5} onClick={setRate} />
-            <button onClick={clear}>Clear</button>
-        </div>
+            <div>
+                <span>Name</span>
+                <input type='text' value={name} onChange={setName} />
+            </div>
+            <div>
+                <div>Text</div>
+                <input type='text' value={text} onChange={setText} />
+            </div>
+            <div>
+                <div>Rate</div>
+                <ReviewCounter 
+                    rating={rate}
+                    onRateChange={setRate} />
+            <div>
+                <button onClick={clear}>Clear</button>
+            </div>
+            </div>
         </div>
   );
 }
