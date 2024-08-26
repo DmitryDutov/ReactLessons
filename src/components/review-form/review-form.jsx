@@ -18,6 +18,7 @@ export const ReviewForm = () => {
         <div>
             <div>Rate</div>
             <Counter min={1} max={5} onClick={setRate} />
+            <button>Clear</button>
         </div>
         </div>
   );

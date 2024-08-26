@@ -16,6 +16,8 @@ const reducer = (state, { type, payload }) => {
         return { ...state, text: value };
     case "SET_RATE":
         return { ...state, rate: value };
+    // case "CLEAR":
+    //     return { ...state, rate: value };
     default:
       return state;
   }
@@ -27,11 +29,13 @@ export const useForm = () => {
   const setName = (event) => dispatch({ type: "SET_NAME", payload: event });
   const setText = (event) => dispatch({ type: "SET_TEXT", payload: event });
   const setRate = (event) => dispatch({ type: "SET_RATE", payload: event });
+  //const clear   = (event) => dispatch({ type: "CLEAR"   , payload: event });
 
   return {
     form,
     setName,
     setText,
     setRate,
+    // clear,
   };
 };
