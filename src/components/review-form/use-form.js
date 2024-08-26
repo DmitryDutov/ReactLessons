@@ -7,20 +7,19 @@ const DEFAULT_FORM_VALUE = {
 };
 
 const reducer = (state, { type, payload }) => {
-  const value = payload.target.value;
 
-  switch (type) {
-    case "SET_NAME":
-      return { ...DEFAULT_FORM_VALUE, name: value };
-    case "SET_TEXT":
-        return { ...state, text: value };
-    case "SET_RATE":
-        return { ...state, rate: value };
-    // case "CLEAR":
-    //     return { ...state, rate: value };
-    default:
-      return state;
-  }
+    switch (type) {
+        case "SET_NAME":
+            return { ...DEFAULT_FORM_VALUE, name: payload.target.value };
+        case "SET_TEXT":
+            return { ...state, text: payload.target.value };
+        case "SET_RATE":
+            return { ...state, rate: payload };
+        case "CLEAR":
+            return { ...DEFAULT_FORM_VALUE };
+        default:
+            return state;
+    }
 };
 
 export const useForm = () => {
@@ -28,14 +27,14 @@ export const useForm = () => {
 
   const setName = (event) => dispatch({ type: "SET_NAME", payload: event });
   const setText = (event) => dispatch({ type: "SET_TEXT", payload: event });
-  const setRate = (event) => dispatch({ type: "SET_RATE", payload: event });
-  //const clear   = (event) => dispatch({ type: "CLEAR"   , payload: event });
+  const setRate = (rate) => dispatch({ type: "SET_RATE", payload: rate });
+  const clear = (event) => dispatch({ type: "CLEAR", payload: event });
 
   return {
     form,
     setName,
     setText,
     setRate,
-    // clear,
+    clear,
   };
 };

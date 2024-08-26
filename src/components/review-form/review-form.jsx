@@ -2,7 +2,7 @@ import { Counter } from "../counter/counter";
 import { useForm } from "./use-form";
 
 export const ReviewForm = () => {
-    const { form, setName,  setText, setRate  } = useForm();
+    const { form, setName,  setText, setRate, clear  } = useForm();
     const { name, text, rate } = form;
 
     return (
@@ -18,7 +18,7 @@ export const ReviewForm = () => {
         <div>
             <div>Rate</div>
             <Counter min={1} max={5} onClick={setRate} />
-            <button>Clear</button>
+            <button onClick={clear}>Clear</button>
         </div>
         </div>
   );
