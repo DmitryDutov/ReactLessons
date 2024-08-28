@@ -1,9 +1,9 @@
 import { useReducer } from "react";
 
 const DEFAULT_FORM_VALUE = {
-  name: "",
-  text: "",
-  rate: 1,
+    name: "",
+    text: "",
+    rate: 1
 };
 
 const reducer = (state, { type, payload }) => {
@@ -23,18 +23,20 @@ const reducer = (state, { type, payload }) => {
 };
 
 export const useForm = () => {
-  const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
+    const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
 
-  const setName = (event) => dispatch({ type: "SET_NAME", payload: event });
-  const setText = (event) => dispatch({ type: "SET_TEXT", payload: event });
-  const setRate = (rate) => dispatch({ type: "SET_RATE", payload: rate });
-  const clear = (event) => dispatch({ type: "CLEAR", payload: event });
+    const setName = (event) => dispatch({ type: "SET_NAME", payload: event });
+    const setRate = (rate) =>
+        dispatch({ type: "SET_RATE", payload: rate });
+    const setText = (event) => dispatch({ type: "SET_TEXT", payload: event });
+    const clear = (event) => dispatch({ type: "CLEAR", payload: event });
 
-  return {
-    form,
-    setName,
-    setText,
-    setRate,
-    clear,
-  };
+    return {
+        form,
+        setName,
+        setText,
+        setRate,
+        clear
+    };
 };
+

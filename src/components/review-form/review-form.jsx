@@ -19,7 +19,7 @@ export const ReviewForm = () => {
                 <div>Rate</div>
                 <ReviewCounter 
                     rating={rate}
-                    onRateChange={setRate} />
+                    onRatingChange={setRate} />
             <div>
                 <button onClick={clear}>Clear</button>
             </div>
@@ -27,3 +27,4 @@ export const ReviewForm = () => {
         </div>
   );
 }
+

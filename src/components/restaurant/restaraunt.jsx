@@ -1,4 +1,4 @@
-import { Reviews } from "../restaraunt-view/restaraunt-view"
+import { Reviews } from "../restaraunt-review/restaraunt-review"
 import { Menu } from "../restaraunt-menu/restaraunt-menu"
 import { ReviewForm } from "../review-form/review-form";
 
@@ -18,3 +18,4 @@ export const Restaurant = ({ name, menu, reviews }) => {
         </section>
     );
 };
+

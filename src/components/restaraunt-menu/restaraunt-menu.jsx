@@ -6,9 +6,10 @@ export const Menu = ({ menu }) => {
             {menu?.map((item) => (
                 <li key={item.id}>
                     {item.name} - ${item.price}
-                    <MenuCounter />
+                    <MenuCounter/>
                 </li>
             ))}
         </div>
     );
 };
+

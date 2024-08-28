@@ -8,3 +8,4 @@ export const Counter = ({ value, onIncrease, onDecrease }) => {
         </div>
     );
 };
+

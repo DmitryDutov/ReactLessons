@@ -1,14 +1,15 @@
-import { Footer } from "../footer/footer"
+import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
-import { ProgressBar } from "../progreessbar/progressbar";
+import { ProgressBar} from "../progreessbar/progressbar.jsx"
 
 export const Layout = ({ children }) => {
     return (
         <div>
-            <ProgressBar />
+            <ProgressBar/>
             <Header />
             {children}
             <Footer />
         </div>
     );
 };
+
