@@ -1,4 +1,4 @@
-import { Counter } from "../counter/counter";
+import { MenuCounter } from "../menu-counter/menu-counter.jsx";
 
 export const Menu = ({ menu }) => {
     return (
@@ -6,9 +6,10 @@ export const Menu = ({ menu }) => {
             {menu?.map((item) => (
                 <li key={item.id}>
                     {item.name} - ${item.price}
-                    <Counter />
+                    <MenuCounter/>
                 </li>
             ))}
         </div>
     );
 };
+
